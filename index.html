@@ -9,6 +9,9 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       
+      <a-light type="ambient" intensity="1"></a-light>
+      <a-light type="directional" position="0 5 0" intensity="0.5"></a-light>
+
       <a-assets>
         <a-asset-item id="Cube" src="./Cube.gltf"></a-asset-item>
         <a-asset-item id="Cube2" src="./Cube2.gltf"></a-asset-item>
@@ -17,11 +20,11 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model src="#Cube" animation-mixer></a-gltf-model>
+        <a-gltf-model src="#Cube" scale="5 5 5" animation-mixer></a-gltf-model>
       </a-entity>
 
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-gltf-model src="#Cube2" animation-mixer></a-gltf-model>
+        <a-gltf-model src="#Cube2" scale="5 5 5" animation-mixer></a-gltf-model>
       </a-entity>
       
     </a-scene>
